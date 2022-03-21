@@ -38,7 +38,7 @@ class Neo4jProvider():
     def get_doctors_by_speciality(self,speciality:Text) -> List[Dict]:
         query = f"""
             MATCH (s:Doctor)
-            WHERE s.speciality = "thần kinh"
+            WHERE s.speciality = {speciality}
             RETURN s
             """
 
